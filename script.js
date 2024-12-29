@@ -1,4 +1,4 @@
-// 🌸 Hiệu ứng hoa mai vàng
+//  Hiệu ứng hoa mai vàng
 function createFlower() {
   const flower = document.createElement("div");
   flower.classList.add("flower");
@@ -12,7 +12,7 @@ function createFlower() {
 }
 setInterval(createFlower, 200);
 
-// 📝 Xác thực đăng nhập
+//  Xác thực đăng nhập
 document.getElementById("loginButton").addEventListener("click", () => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -30,7 +30,7 @@ document.getElementById("loginButton").addEventListener("click", () => {
   }
 });
 
-// 🌐 Chuyển tab và điều chỉnh nhạc
+//  Chuyển tab và điều chỉnh nhạc
 document.querySelectorAll(".nav-link").forEach((tab) => {
   tab.addEventListener("click", () => {
     document
@@ -46,4 +46,31 @@ document.querySelectorAll(".nav-link").forEach((tab) => {
       music.play(); // Phát nhạc nếu không phải Video
     }
   });
+});
+//  Chặn Click Chuột Phải
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+  alert(" Chức năng này bị vô hiệu hóa!");
+});
+
+//  Chặn Phím Tắt Ctrl+S, Ctrl+U, Ctrl+Shift+I
+document.addEventListener("keydown", (event) => {
+  if (
+    event.ctrlKey &&
+    (event.key === "s" ||
+      event.key === "S" ||
+      event.key === "u" ||
+      event.key === "U")
+  ) {
+    event.preventDefault();
+    alert(" Chức năng này bị vô hiệu hóa!");
+  }
+  if (
+    event.ctrlKey &&
+    event.shiftKey &&
+    (event.key === "I" || event.key === "i")
+  ) {
+    event.preventDefault();
+    alert(" Chức năng này bị vô hiệu hóa!");
+  }
 });

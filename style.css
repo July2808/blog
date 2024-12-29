@@ -180,3 +180,62 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+/* Hiệu ứng hoa mai vàng */
+#flower-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.flower {
+  position: absolute;
+  top: -10px;
+  background: #ffd700;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ffec8b;
+  animation: fall linear infinite;
+}
+
+/* Keyframes cho hoa mai rơi */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+.firework {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, #ff0022, #ffa500, transparent);
+  border-radius: 50%;
+  pointer-events: none; /* Không ảnh hưởng đến tương tác người dùng */
+  animation: explode 1s ease-out forwards;
+  box-shadow: 0 0 10px 2px #ffd700;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+/* 🔒 Chặn kéo thả và chọn nội dung */
+img,
+video {
+  pointer-events: none; /* Vô hiệu hóa tương tác chuột */
+  -webkit-user-drag: none; /* Chặn kéo thả */
+  -webkit-touch-callout: none; /* Chặn menu chuột phải trên iOS */
+  -webkit-user-select: none; /* Chặn chọn nội dung */
+  user-select: none;
+}
