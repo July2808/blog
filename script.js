@@ -1,0 +1,41 @@
+// 🌸 Hiệu ứng hoa mai vàng
+function createFlower() {
+  const flower = document.createElement("div");
+  flower.classList.add("flower");
+  flower.style.left = `${Math.random() * 100}vw`;
+  flower.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  document.getElementById("flower-container").appendChild(flower);
+
+  setTimeout(() => {
+    flower.remove();
+  }, 5000);
+}
+setInterval(createFlower, 200);
+
+// 📝 Xác thực đăng nhập
+document.getElementById("loginButton").addEventListener("click", () => {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (
+    (username === "admin" && password === "admin") ||
+    (username === "pedau" && password === "pedau2808")
+  ) {
+    document.getElementById("login-container").style.display = "none";
+    document.getElementById("navbar").style.display = "flex";
+    document.getElementById("home").style.display = "block";
+    document.getElementById("homeMusic").play();
+  } else {
+    alert("Sai tên đăng nhập hoặc mật khẩu!");
+  }
+});
+
+// 🌐 Chuyển tab
+document.querySelectorAll(".nav-link").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    document
+      .querySelectorAll(".tab-content")
+      .forEach((content) => (content.style.display = "none"));
+    document.getElementById(tab.dataset.tab).style.display = "block";
+  });
+});

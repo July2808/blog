@@ -1,0 +1,138 @@
+/* Form Đăng Nhập */
+#login-container {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#login-container h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#loginButton {
+  width: 100%;
+  padding: 10px;
+  background: #00eeff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#loginButton:hover {
+  background: #e63946;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 Bố Cục Ảnh Dạng Lưới Nhỏ */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cột, mỗi ảnh 1 cột */
+  gap: 10px; /* Khoảng cách giữa ảnh */
+  margin-top: 20px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.image-gallery img {
+  width: 120px; /* Chiều rộng ảnh nhỏ lại */
+  height: 180px;
+  object-fit: cover; /* Cắt ảnh vừa khung mà không bị méo */
+  border-radius: 8px; /* Bo góc mềm mại */
+  border: 2px solid #0066ff; /* Viền màu vàng nổi bật */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1); /* Phóng to nhẹ khi di chuột */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+.block {
+  background-color: #e6f7ff;
+  padding: 20px;
+  border: 2px solid #0099cc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.block:hover {
+  transform: scale(1.05);
+}
+
+.name {
+  color: #004d80;
+  font-size: 24px;
+  margin: 0;
+}
+
+.birthdate {
+  color: #006699;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.message {
+  color: #333;
+  font-size: 16px;
+  font-style: italic;
+  margin: 10px 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #0099cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007acc;
+}

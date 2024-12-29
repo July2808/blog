@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./ico/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./ico/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./ico/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./ico/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./ico/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./ico/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./ico/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./ico/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./ico/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./ico/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./ico/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./ico/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Blog Pé Dâu - Nơi Lưu Giữ Kỉ Niệm Của Cha Mẹ Pé Dâu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Nhạc nền cho Trang Chủ và Hình -->
+    <audio id="homeMusic" loop>
+      <source src="nhac/tet_dong_day.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Hiệu ứng hoa mai -->
+    <div id="flower-container"></div>
+
+    <!-- Form Đăng nhập -->
+    <div id="login-container">
+      <h2>ĐĂNG NHẬP HỆ THỐNG</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">👤 Tên đăng nhập:</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Nhập tên đăng nhập"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">🔑 Mật khẩu:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+        </div>
+        <button type="button" id="loginButton">🔓 Đăng Nhập</button>
+      </form>
+    </div>
+
+    <!-- Thanh điều hướng -->
+    <nav id="navbar" style="display: none">
+      <a href="#" class="nav-link" data-tab="home">Trang Chủ</a>
+      <a href="#" class="nav-link" data-tab="gallery"> Hình</a>
+      <a href="#" class="nav-link" data-tab="video"> Video</a>
+    </nav>
+
+    <!-- Nội dung trang chủ -->
+    <div id="home" class="tab-content" style="display: none">
+      <div class="block">
+        <h1>Tên</h1>
+        <h1 class="name">Lưu Huỳnh Khả Ái</h1>
+        <p class="birthdate">Ngày sinh: 28/08/2024</p>
+        <p class="message">
+          "Con là ánh sáng của ba mẹ. Mong con luôn khỏe mạnh và hạnh phúc!"
+        </p>
+      </div>
+    </div>
+
+    <!-- Nội dung hình -->
+    <div id="gallery" class="tab-content" style="display: none">
+      <h1>Thư Viện Hình Ảnh</h1>
+      <div class="image-gallery">
+        <img src="hinh/hinh1.jpg" alt="Hình 1" />
+        <img src="hinh/hinh2.jpg" alt="Hình 2" />
+        <img src="hinh/hinh3.jpg" alt="Hình 3" />
+        <img src="hinh/hinh4.jpg" alt="Hình 4" />
+        <img src="hinh/hinh5.jpg" alt="Hình 5" />
+        <img src="hinh/hinh6.jpg" alt="Hình 6" />
+      </div>
+    </div>
+
+    <!-- Nội dung video -->
+    <div id="video" class="tab-content" style="display: none">
+      <h1>🎥 Thư Viện Video 🎥</h1>
+      <div class="video-gallery">
+        <video controls>
+          <source src="video/video1.mp4" type="video/mp4" />
+        </video>
+        <video controls>
+          <source src="video/video2.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </body>
+</html>
