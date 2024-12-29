@@ -30,12 +30,20 @@ document.getElementById("loginButton").addEventListener("click", () => {
   }
 });
 
-// 🌐 Chuyển tab
+// 🌐 Chuyển tab và điều chỉnh nhạc
 document.querySelectorAll(".nav-link").forEach((tab) => {
   tab.addEventListener("click", () => {
     document
       .querySelectorAll(".tab-content")
       .forEach((content) => (content.style.display = "none"));
     document.getElementById(tab.dataset.tab).style.display = "block";
+
+    // Tắt nhạc khi vào Video
+    const music = document.getElementById("homeMusic");
+    if (tab.dataset.tab === "video") {
+      music.pause(); // Dừng phát nhạc
+    } else {
+      music.play(); // Phát nhạc nếu không phải Video
+    }
   });
 });

@@ -136,3 +136,47 @@ button {
 button:hover {
   background-color: #007acc;
 }
+/* 🌐 Điều Chỉnh Thanh Điều Hướng Sang Phải */
+#navbar {
+  position: fixed; /* Giữ thanh điều hướng cố định bên phải */
+  right: 0;
+  top: 50%; /* Căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* Sắp xếp các thẻ theo chiều dọc */
+  background-color: #ffd700; /* Màu nền vàng nổi bật */
+  border-radius: 8px 0 0 8px; /* Bo tròn góc bên trái */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ */
+  padding: 10px;
+  z-index: 1000; /* Luôn hiển thị trên cùng */
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  color: #333;
+  margin: 5px 0;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#navbar .nav-link:hover {
+  background-color: #ffa500; /* Màu cam khi di chuột */
+  color: #fff;
+}
+
+/* 📝 Căn Chỉnh Thông Điệp */
+#home {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  max-width: 300px; /* Giới hạn độ rộng thông điệp */
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff8dc; /* Nền màu nhẹ nhàng */
+  border: 1px solid #ffd700; /* Viền vàng */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
